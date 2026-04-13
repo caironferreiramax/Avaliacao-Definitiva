@@ -90,7 +90,7 @@ async function carregarSelects() {
     try {
       const resProdutos = await fetch("http://localhost:3000/produto");
       const produtos = await resProdutos.json();
-      selectProduto.innerHTML = '<option value="">Selecione um Plano...</option>';
+      selectProduto.innerHTML = '<option value="">Selecione um Produto...</option>';
 
       produtos.forEach((p) => {
         listaPrecosProdutos[p.ID] = p.PRECO || p.VALOR_TOTAL || p.PRECO;
